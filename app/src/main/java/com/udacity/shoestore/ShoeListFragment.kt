@@ -67,8 +67,10 @@ class ShoeListFragment : Fragment() {
 
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        return NavigationUI.onNavDestinationSelected(item, requireView().findNavController())
-                || super.onOptionsItemSelected(item)
+        when (item.itemId) {
+            R.id.action_logout -> view?.findNavController()?.popBackStack()
+        }
+        return super.onOptionsItemSelected(item)
     }
     fun loadShoes(shoes: List<Shoe>) {
         context?.let { context ->
