@@ -46,7 +46,7 @@ class ShoeListFragment : Fragment() {
         val shoesObserver = Observer<MutableList<Shoe>> { it ->
             // Update the UI, in this case, a TextView.
             if (it.isNotEmpty()) {
-                createShoes(it)
+                loadShoes(it)
             }
         }
           viewModel.getShoeLiveData().observe(viewLifecycleOwner,shoesObserver)
@@ -70,7 +70,7 @@ class ShoeListFragment : Fragment() {
         return NavigationUI.onNavDestinationSelected(item, requireView().findNavController())
                 || super.onOptionsItemSelected(item)
     }
-    fun createShoes(shoes: List<Shoe>) {
+    fun loadShoes(shoes: List<Shoe>) {
         context?.let { context ->
             val shoeContainer = binding.list
             shoes.forEach { shoe ->
