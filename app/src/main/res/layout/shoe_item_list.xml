@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="shoe_list_item"
+            type="com.udacity.shoestore.models.Shoe" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/shoeItemCardView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="6dp"
+            android:layout_weight="1"
+            android:foreground="?android:attr/selectableItemBackground"
+            app:cardBackgroundColor="#FFFFFF"
+            app:cardCornerRadius="6dp"
+            app:cardElevation="6dp"
+            app:contentPadding="@dimen/content_padding"
+            app:strokeColor="@color/purple_500">
+
+            <!-- Using a linear layout because it provides a more uniform look since we are  looping through variable data to display on the screen-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="114dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/shoe_name"
+                        style="@style/sub_header"/>
+
+                    <TextView
+                        android:id="@+id/shoe_name"
+                        android:layout_width="263dp"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/shoe_name_hint"
+                        style="@style/sub_header"
+                        android:textColor="@color/black"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="114dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/company_name"
+                        style="@style/sub_header"/>
+
+                    <TextView
+                        android:id="@+id/company_name"
+                        android:layout_width="263dp"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/company_name_hint"
+                        style="@style/sub_header"
+                        android:textColor="@color/black"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="114dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/shoe_size"
+                        style="@style/sub_header"/>
+
+                    <TextView
+                        android:id="@+id/shoe_size"
+                        android:layout_width="262dp"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/shoe_size_hint"
+                        style="@style/sub_header"
+                        android:textColor="@color/black"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="114dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/description"
+                        style="@style/sub_header"
+                        />
+
+                    <TextView
+                        android:id="@+id/description"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/description_hint"
+                        android:textColor="@color/black"
+                        />
+                </LinearLayout>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".5"
+            tools:srcCompat="@tools:sample/avatars" />
+    </LinearLayout>
+</layout>

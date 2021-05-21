@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="default_padding_top">32dp</dimen>
+    <dimen name="default_padding">16dp</dimen>
+    <dimen name="default_margin">16dp</dimen>
+    <dimen name="capitalized_headers">40sp</dimen>
+    <dimen name="content_padding">8dp</dimen>
+    <dimen name="top_dimension">16dp</dimen>
+    <dimen name="end_dimension">16dp</dimen>
+    <dimen name="start_dimension">16dp</dimen>
+</resources>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+<LinearLayout
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".WelcomeFragment"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Welcome!"
+        style="@style/Headers"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/welcome_text"
+        style="@style/Details" />
+
+    <ImageView
+        android:id="@+id/imageSample"
+        android:layout_width="match_parent"
+        android:layout_height="137dp"
+        android:adjustViewBounds="true"
+        android:scaleType="fitXY"
+        android:layout_marginTop="@dimen/default_padding_top"
+        android:layout_marginStart="@dimen/default_padding"
+        android:layout_marginEnd="@dimen/default_padding"
+        android:src="@drawable/shallow_focused_photo_pair_of_white_and_black_running_shoes"/>
+<!--         />-->
+
+    <Button
+        android:id="@+id/moveToInstructions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/default_padding_top"
+        android:layout_marginStart="@dimen/default_padding"
+        android:layout_marginEnd="@dimen/default_padding"
+        android:text="Next" />
+
+
+
+</LinearLayout>
+</layout>

@@ -1,0 +1,51 @@
+<resources>
+    <string name="app_name">ShoeStore</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_logout">Logout</string>
+    <string name="add_shoe">Add Shoe</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="sign_up_solicitation">
+Don\'t have an account? Sign up!
+</string>
+    <string name="welcome_text">Here is a presentation of an inventory of different
+    styles of shoes for different sexes, styles, and for different occassions.
+    Some of them are even sneakers!\nClick next to proceed to the Instruction screen </string>
+    <string name="instructions_text">In the list of shoes displayed in the shoe list inventory
+    screen. Tap the floating action button to add a shoe to the list inventory. Tap on
+    each shoe item on the list to get the detail of the shoe tapped which includes Shoe Name,
+        Company, Shoe Size and Description.\nClick on the button below to go to the shoe list screen! </string>
+    <string name="shoe_list_button">Go To Shoe List</string>
+    <string name="enter_shoe_name">Enter Shoe Name</string>
+    <string name="description">Description:</string>
+    <string name="company_name">Company Name:</string>
+    <string name="shoe_size">Shoe Size:</string>
+    <string name="enter_company_name">Enter Company Name</string>
+    <string name="enter_shoe_size">Enter Shoe Size</string>
+    <string name="enter_description">Enter Description</string>
+    <string name="shoe_name">Shoe Name:</string>
+    <string name="shoe_name_hint">Shoe Name</string>
+    <string name="company_name_hint">Company Name</string>
+    <string name="shoe_size_hint">Shoe Size</string>
+    <string name="description_hint">Description</string>
+    <string name="next_button">Next</string>
+    <string name="welcome_header">Welcome to the Shoe Inventory App!</string>
+    <string name="welcome_body">Here you can store and retrieve shoe information at your leisure.</string>
+    <string name="instructions_header">Instructions</string>
+    <string name="previous_button">Previous</string>
+    <!-- Strings related to app functionality -->
+    <string name="shoe_listings">Shoe Listings</string>
+    <string name="save">Save</string>
+
+    <string name="instructions_step_one">1. Tap the + icon to add a new shoe item to your inventory</string>
+    <string name="instructions_step_two">2. Tap the Save Button to save the shoe to your inventory</string>
+    <string name="logout_menu_item">Logout</string>
+
+    <string name="shoe_details_header">Add Shoe Details</string>
+    <string name="cancel">Cancel</string>
+    <string name="enter_image_url">Enter Image Url</string>
+    <string name="image_url">Image Url:</string>
+</resources>
