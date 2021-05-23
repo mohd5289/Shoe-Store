@@ -1,11 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<fragment android:layout_height="match_parent"
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+<data></data>
+    <!--    Coordinator Layout because  i have to frame a parent to hold the fragment-->
+<androidx.coordinatorlayout.widget.CoordinatorLayout
     android:layout_width="match_parent"
-    android:id="@+id/nav_host_fragment"
-    android:name="androidx.navigation.fragment.NavHostFragment"
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@color/app_background"
-    app:defaultNavHost="true"
-    app:navGraph="@navigation/main_navigation" />
+    android:layout_height="match_parent">
+    <fragment
+
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:id="@+id/nav_host_fragment"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:background="@color/app_background"
+        app:defaultNavHost="true"
+        app:navGraph="@navigation/main_navigation" />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>
 

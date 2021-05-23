@@ -12,7 +12,7 @@ import androidx.lifecycle.Transformations
 
 class ShoeViewModel:ViewModel(),Observable {
 
-    private val Shoes = MutableLiveData<MutableList<Shoe>>(mutableListOf(
+    private var Shoes = MutableLiveData<MutableList<Shoe>>(mutableListOf(
             Shoe("Sneakers",13.0, "Nike","Red", mutableListOf("https://unsplash.com/photos/164_6wVEHfI")),
             Shoe("BluePrint Umbrella", 11.5,"UnderArmour","Black and White Leopard", mutableListOf("https://unsplash.com/photos/m6mAYVEHlNs")),
             Shoe("Toe heeled shoes",10.9,"Crocs Inc","Black leather peep", mutableListOf("https://unsplash.com/photos/sl963NLr3bI")),
@@ -42,7 +42,7 @@ class ShoeViewModel:ViewModel(),Observable {
     //private val shoes = MutableLiveData<MutableList<Shoe>>(mutableListOf())
   //  Shoe(null,0.0,"company","description", mutableListOf(url))
     @Bindable
-    var shoe:Shoe?= null
+    var shoe= Shoe()
         set(value) {
             if (value != field) {
                 field = value
@@ -58,9 +58,10 @@ class ShoeViewModel:ViewModel(),Observable {
 
 
 
-    fun addShoe(item: Shoe?) {
-        item?.let {
-            Shoes.value?.add(item)
+    fun addShoe(shoe: Shoe?) {
+
+        shoe?.let {
+            Shoes.value?.add(shoe)
         }
     }
     fun getShoeLiveData(): LiveData<MutableList<Shoe>> = Shoes

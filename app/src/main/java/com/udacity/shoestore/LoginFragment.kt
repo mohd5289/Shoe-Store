@@ -33,6 +33,7 @@ lateinit var binding: FragmentLoginBinding
 
 binding.btnLogin.setOnClickListener({ view?.findNavController()?.navigate(LoginFragmentDirections.actionLoginFragmentToWelcomeFragment())})
 
+        binding.btnSignUp.setOnClickListener({ view?.findNavController()?.navigate(LoginFragmentDirections.actionLoginFragmentToWelcomeFragment())})
 
         // Inflate the layout for this fragment
         return binding.root

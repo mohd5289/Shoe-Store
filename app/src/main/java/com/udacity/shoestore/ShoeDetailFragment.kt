@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
+import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.ViewModelProviders
 import androidx.navigation.findNavController
 
@@ -14,6 +15,7 @@ import com.udacity.shoestore.databinding.FragmentShoeDetailBinding
 import com.udacity.shoestore.databinding.FragmentShoeListBinding
 import com.udacity.shoestore.models.Shoe
 import com.udacity.shoestore.models.ShoeViewModel
+import timber.log.Timber
 import javax.xml.datatype.DatatypeFactory.newInstance
 
 // TODO: Rename parameter arguments, choose names that match
@@ -30,7 +32,7 @@ class ShoeDetailFragment : Fragment() {
 
     private lateinit var binding:FragmentShoeDetailBinding
 
-    private lateinit var viewModel: ShoeViewModel
+    private val viewModel: ShoeViewModel by activityViewModels()
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -39,14 +41,17 @@ class ShoeDetailFragment : Fragment() {
         binding.lifecycleOwner = this
 
 
-        viewModel= ViewModelProviders.of(this).get(ShoeViewModel::class.java)
+
         binding.shoeViewModel = viewModel
         binding.shoe = Shoe("name", 0.0, "company", "description", mutableListOf())
 
-    viewModel.url  ="";
+
 
         binding.save.setOnClickListener {
             viewModel.addShoe(viewModel.shoe)
+
+
+
 
              view?.findNavController()?.navigate(ShoeDetailFragmentDirections.actionShoeDetailFragmentToShoeListFragment())
         }

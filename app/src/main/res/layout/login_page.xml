@@ -1,3 +1,4 @@
+<!--    Linear Layout because  overall Widgets are less complex-->
 <LinearLayout
 
     android:orientation="vertical"

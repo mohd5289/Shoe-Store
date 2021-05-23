@@ -4,9 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".ShoesListFragment">
 
-    <!-- RelativeLayout to position the FloatingActionButton correctly -->
+    <!-- Constraint Layout because I prefer to have the items place set in place but still adjust with the size of the screen -->
 
-    <RelativeLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/outer_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
@@ -21,20 +22,26 @@
             android:layout_marginBottom="16dp"
             android:contentDescription="@string/add_shoe"
             android:src="@drawable/ic_add"
-                  app:backgroundTint="#4D00EA"
+            app:backgroundTint="#4D00EA"
             app:backgroundTintMode="src_in"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.926"
+            app:layout_constraintStart_toStartOf="@+id/outer_layout"
+            app:layout_constraintTop_toTopOf="@+id/outer_layout"
+            app:layout_constraintVertical_bias="0.933"
             app:tint="@color/white" />
 
         <ScrollView
             android:id="@+id/shoeListScrollView"
             android:layout_width="383dp"
             android:layout_height="569dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginBottom="16dp">
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.428"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0">
 
             <LinearLayout
                 android:id="@+id/list"
@@ -46,5 +53,5 @@
 
         </ScrollView>
 
-    </RelativeLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

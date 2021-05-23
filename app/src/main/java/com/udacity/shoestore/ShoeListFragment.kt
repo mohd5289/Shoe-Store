@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.*
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
@@ -13,6 +14,7 @@ import androidx.navigation.ui.NavigationUI
 import com.udacity.shoestore.databinding.FragmentShoeListBinding
 import com.udacity.shoestore.models.Shoe
 import com.udacity.shoestore.models.ShoeViewModel
+import timber.log.Timber
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -26,7 +28,7 @@ private const val ARG_PARAM2 = "param2"
  */
 class ShoeListFragment : Fragment() {
     // TODO: Rename and change types of parameters
-  private lateinit var viewModel:ShoeViewModel
+  private  val viewModel:ShoeViewModel by activityViewModels()
 
 
     private lateinit var binding: FragmentShoeListBinding
@@ -38,13 +40,14 @@ class ShoeListFragment : Fragment() {
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_shoe_list, container, false)
         // Inflate the layout for this fragment
         binding.lifecycleOwner=this
-        viewModel= ViewModelProviders.of(this).get(ShoeViewModel::class.java)
+
     //    val callback = requireActivity().onBackPressedDispatcher.addCallback(this) {
             // Handle the back button event
       //  }
 
-        val shoesObserver = Observer<MutableList<Shoe>> { it ->
+        val shoesObserver = Observer<MutableList<Shoe>> { it
             // Update the UI, in this case, a TextView.
+            Timber.i(it.joinToString())
             if (it.isNotEmpty()) {
                 loadShoes(it)
             }
