@@ -11,7 +11,9 @@ import com.udacity.shoestore.databinding.ShoeItemListBinding
 import com.udacity.shoestore.models.Shoe
 import kotlinx.android.synthetic.main.fragment_shoe_detail.view.*
 
-
+//This code is attributed to willhughes11
+///
+//ShoeInventoryApp
 class ShoeLayout: LinearLayout {
     constructor(context: Context) : super(context)
     constructor(context: Context, attrs: AttributeSet?) : super(context, attrs)

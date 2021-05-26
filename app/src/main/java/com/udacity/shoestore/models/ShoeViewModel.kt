@@ -31,6 +31,8 @@ class ShoeViewModel:ViewModel(),Observable {
 
     private val propertyChangeRegistry = PropertyChangeRegistry()
 
+
+//    This code is attributed to stackoverflow
     @get:Bindable
     var url= ""
         set(value) {
