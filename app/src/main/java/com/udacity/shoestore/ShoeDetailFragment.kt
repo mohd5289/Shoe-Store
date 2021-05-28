@@ -43,17 +43,18 @@ class ShoeDetailFragment : Fragment() {
 
 
         binding.shoeViewModel = viewModel
-        binding.shoe = Shoe("name", 0.0, "company", "description", mutableListOf())
-
+      //  binding.shoe = Shoe()
+       viewModel.createNewShoe()
 
 
         binding.save.setOnClickListener {
-            viewModel.addShoe(viewModel.shoe)
+            viewModel.addShoe(viewModel.currentShoe)
 
 
 
 
              view?.findNavController()?.navigate(ShoeDetailFragmentDirections.actionShoeDetailFragmentToShoeListFragment())
+
         }
 
         binding.cancel.setOnClickListener({
